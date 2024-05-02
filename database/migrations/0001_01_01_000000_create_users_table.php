@@ -15,8 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->timestamp('email_verified_at')->nullable(); 
+            $table->string('password')->nullable(); //Nulo campo password
+            $table->string('avatar')->nullable(); //Creacion campo avatar para almacenar data de google
+            $table->string('external_id')->nullable(); // Creacion de campo external_id para almacenar data de google
+            $table->string('external_auth')->nullable(); // Creacion de campo external_auth para almacenar data de google
             $table->rememberToken();
             $table->timestamps();
         });

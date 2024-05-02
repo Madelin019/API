@@ -31,4 +31,11 @@ return [
         ],
     ],
 
+    //Codigo necesario para los servicios  (API) de Google
+    'google' => [
+        'client_id' => env('GOOGLE_OAUTH_ID'), //ID del cliente de google (mi servicio)
+        'client_secret' => env('GOOGLE_OAUTH_KEY'), //Mi llave proporcionada por google 
+        'redirect' => '/google-callback', //Ruta que redirige a /google-callback
+    ],
+
 ];
